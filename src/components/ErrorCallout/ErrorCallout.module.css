@@ -1,9 +1,9 @@
 .callout {
-  width: 100%;
+  flex-grow: 1;
   padding: 0.75rem 2rem;
-  margin-bottom: 1rem;
   border-radius: var(--border-radius);
   font-size: var(--size-normal);
+  align-content: center;
   visibility: hidden;
 }
 

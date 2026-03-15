@@ -11,8 +11,10 @@ function App() {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>Logs Viewer</h1>
-      <ErrorCallout error={error} />
+      <div className={styles.header}>
+        <h1 className={styles.title}>Logs Viewer</h1>
+        <ErrorCallout error={error} />
+      </div>
       <LoadingBar loading={loading} />
       <LogsTable logs={logs} />
     </main>

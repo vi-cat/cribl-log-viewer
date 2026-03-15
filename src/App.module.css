@@ -4,9 +4,19 @@
   height: 100dvh;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .title {
   padding: 1rem;
   font-size: var(--size-large);
   font-weight: var(--weight-bold);
   color: var(--text-strong);
+  flex-grow: 0;
 }
