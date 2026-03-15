@@ -1,0 +1,60 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--size-small);
+  table-layout: fixed;
+}
+
+.table thead tr {
+  background-color: var(--scheme-ter);
+  border-bottom: 2px solid var(--grey-lighter);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: var(--weight-semibold);
+  color: var(--text-strong);
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--grey-lighter);
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: var(--scheme-bis);
+}
+
+.table tbody tr:hover {
+  background-color: var(--primary-light);
+  cursor: pointer;
+}
+
+.toggleCell {
+  color: var(--text-light);
+  width: 20px;
+  text-align: center;
+}
+
+.timeCell {
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+  color: var(--text-light);
+  font-family: var(--family-code);
+  vertical-align: top;
+}
+
+.eventCell {
+  padding: 0.75rem 1rem;
+  font-family: var(--family-code);
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0;
+  width: 100%;
+}

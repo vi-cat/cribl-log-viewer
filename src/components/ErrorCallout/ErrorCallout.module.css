@@ -1,0 +1,14 @@
+.callout {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  font-size: var(--size-normal);
+  visibility: hidden;
+}
+
+.callout.active {
+  visibility: visible;
+  background-color: var(--danger-light);
+  color: var(--danger-dark);
+}
