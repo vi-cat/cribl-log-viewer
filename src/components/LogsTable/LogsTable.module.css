@@ -47,7 +47,9 @@
   text-align: center;
   user-select: none;
   padding-top: 0.75rem;
-  transition: transform 0.15s ease, color 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
 }
 
 .toggleCellExpanded {
@@ -75,6 +77,7 @@
   padding: 0.75rem 1rem 0.75rem 3rem;
   background-color: var(--scheme-ter);
   border-bottom: 1px solid var(--grey-lighter);
+  cursor: pointer;
 }
 
 .expandedContent pre {
