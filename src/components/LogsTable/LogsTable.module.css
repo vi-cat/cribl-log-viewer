@@ -1,3 +1,8 @@
+.contained {
+  contain: "strict";
+  overflow: "auto";
+  height: "100vh";
+}
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -25,12 +30,15 @@
   border-bottom: 1px solid var(--grey-lighter);
 }
 
-.table tbody tr:nth-child(even) {
+.rowEven {
   background-color: var(--scheme-bis);
 }
 
 .table tbody tr:hover {
   background-color: var(--primary-light);
+}
+
+.row {
   cursor: pointer;
 }
 
@@ -38,6 +46,26 @@
   color: var(--text-light);
   width: 20px;
   text-align: center;
+  user-select: none;
+  transition: transform 0.15s ease;
+}
+
+.toggleCellExpanded {
+  color: var(--primary);
+  transform: rotate(90deg);
+}
+
+.expandedCell {
+  padding: 0.75rem 1rem;
+  background-color: var(--scheme-ter);
+}
+
+.expandedCell pre {
+  font-family: var(--family-code);
+  font-size: var(--size-small);
+  color: var(--text);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 .timeCell {
