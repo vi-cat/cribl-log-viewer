@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+.title {
+  padding: 1rem;
+  font-size: var(--size-large);
+  font-weight: var(--weight-bold);
+  color: var(--text-strong);
+}

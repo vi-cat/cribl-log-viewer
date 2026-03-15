@@ -1,3 +1,4 @@
+import styles from "./App.module.css";
 import { ErrorCallout } from "./components/ErrorCallout/ErrorCallout";
 import { LoadingBar } from "./components/LoadingBar/LoadingBar";
 import { LogsTable } from "./components/LogsTable/LogsTable";
@@ -9,14 +10,8 @@ function App() {
   );
 
   return (
-    <main>
-      <h1
-        style={{
-          padding: "1rem",
-        }}
-      >
-        Logs Viewer
-      </h1>
+    <main className={styles.main}>
+      <h1 className={styles.title}>Logs Viewer</h1>
       <ErrorCallout error={error} />
       <LoadingBar loading={loading} />
       <LogsTable logs={logs} />

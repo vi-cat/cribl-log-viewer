@@ -1,53 +1,53 @@
-.contained {
-  contain: "strict";
-  overflow: "auto";
-  height: "100vh";
-}
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--size-small);
-  table-layout: fixed;
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 
-.table thead tr {
+.header {
+  display: grid;
+  grid-template-columns: 2rem 14rem 1fr;
   background-color: var(--scheme-ter);
   border-bottom: 2px solid var(--grey-lighter);
-  position: sticky;
-  top: 0;
-  z-index: 1;
+  font-size: var(--size-small);
 }
 
-.table th {
+.headerCell {
   padding: 0.75rem 1rem;
-  text-align: left;
   font-weight: var(--weight-semibold);
   color: var(--text-strong);
   white-space: nowrap;
 }
 
-.table tbody tr {
+.listWrapper {
+  flex: 1;
+  min-height: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2rem 14rem 1fr;
   border-bottom: 1px solid var(--grey-lighter);
+  cursor: pointer;
+  font-size: var(--size-small);
+  height: 42px; /* keep in sync with COLLAPSED_ROW_HEIGHT in LogsTable.tsx */
+}
+
+.row:hover {
+  background-color: var(--primary-light);
 }
 
 .rowEven {
   background-color: var(--scheme-bis);
 }
 
-.table tbody tr:hover {
-  background-color: var(--primary-light);
-}
-
-.row {
-  cursor: pointer;
-}
-
 .toggleCell {
   color: var(--text-light);
-  width: 20px;
   text-align: center;
   user-select: none;
-  transition: transform 0.15s ease;
+  padding-top: 0.75rem;
+  transition: transform 0.15s ease, color 0.15s ease;
 }
 
 .toggleCellExpanded {
@@ -55,25 +55,11 @@
   transform: rotate(90deg);
 }
 
-.expandedCell {
-  padding: 0.75rem 1rem;
-  background-color: var(--scheme-ter);
-}
-
-.expandedCell pre {
-  font-family: var(--family-code);
-  font-size: var(--size-small);
-  color: var(--text);
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-}
-
 .timeCell {
   padding: 0.75rem 1rem;
   white-space: nowrap;
   color: var(--text-light);
   font-family: var(--family-code);
-  vertical-align: top;
 }
 
 .eventCell {
@@ -83,6 +69,19 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 0;
-  width: 100%;
+}
+
+.expandedContent {
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  background-color: var(--scheme-ter);
+  border-bottom: 1px solid var(--grey-lighter);
+}
+
+.expandedContent pre {
+  font-family: var(--family-code);
+  font-size: var(--size-small);
+  line-height: 1.5; /* 0.75rem × 1.5 = 18px — keep in sync with getExpandedHeight */
+  color: var(--text);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
