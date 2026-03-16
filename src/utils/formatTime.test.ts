@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { formatTime } from "../utils/formatTime";
+import { formatTime } from "./formatTime";
 
 describe("formatTime", () => {
   it("formats a valid millisecond timestamp as ISO 8601", () => {

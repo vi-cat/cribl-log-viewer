@@ -4,7 +4,7 @@ type ErrorCalloutProps = {
   error: Error | null;
 };
 
-export function ErrorCallout({ error }: ErrorCalloutProps) {
+export const ErrorCallout = ({ error }: ErrorCalloutProps) => {
   return (
     <div className={`${styles.callout}${error ? ` ${styles.active}` : ""}`}>
       {error && (
@@ -14,4 +14,4 @@ export function ErrorCallout({ error }: ErrorCalloutProps) {
       )}
     </div>
   );
-}
+};

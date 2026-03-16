@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { parseNDJSON } from "../utils/parseNDJSON";
+import { parseNDJSON } from "./parseNDJSON";
 
 describe("parseNDJSON", () => {
   it("parses a single complete line", () => {
